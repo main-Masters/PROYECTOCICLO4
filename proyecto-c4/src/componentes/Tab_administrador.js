@@ -1,6 +1,7 @@
 import {TabContent, TabPane, Nav, NavItem, NavLink} from "reactstrap";
 import { useState } from 'react';
 import Welcome from "./nombre";
+import Lista_productos from "./Lista_productos";
 
 
 
@@ -48,7 +49,7 @@ function Tab_administrador() {
            <TabPane tabId="1">
              <div className='container'>
                <br />
-                <Welcome name="ALFREDO"/>;
+                <Lista_productos/>;
              </div>
   
            </TabPane>
