@@ -1,0 +1,16 @@
+.Card-contenedor {
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  background: rgb(206, 142, 142);
+}
+
+.ListaDeProductos-contenedor{
+  height: auto;
+  background-color: #EEE;
+  text-align: center;
+}
+
+.img{
+  color: teal;
+}

@@ -1,12 +1,14 @@
 import {TabContent, TabPane, Nav, NavItem, NavLink} from "reactstrap";
 import { useState } from 'react';
-import Welcome from "./nombre";
-import Lista_productos from "./Lista_productos";
+import ListaDeProductos from "./ListaDeProductos";
+import FormularioProducto from "./FormularioProducto";
+import ListaVentas from "./ListaVentas";
+
 
 
 
 function Tab_administrador() {
-
+    // const [productos, setProductos] = useState([]);
     const[activeTab,setActiveTab] = useState("1");
   
     const cambiarTab = (numeroTab) =>{
@@ -14,7 +16,16 @@ function Tab_administrador() {
         setActiveTab(numeroTab);
       }
     }
-  
+    
+    
+    //   const agregarProducto = producto => {
+    // if (producto.nombre.trim()) {
+    //   producto.nombre = producto.nombre.trim();
+    //   const productosActualizados = [producto, ...productos];
+    //   setProductos(productosActualizados);
+    // }
+    //}
+
     return (
       <div className="Tab_administrador">
          <Nav tabs>
@@ -31,7 +42,7 @@ function Tab_administrador() {
              <NavLink 
                 className={(activeTab=="2" ? "activeTab baseTab" : "baseTab" )}
              onClick={()=>cambiarTab("2")}>
-               Modificar productos
+               Agregar producto
              </NavLink>
            </NavItem>
   
@@ -48,26 +59,21 @@ function Tab_administrador() {
          <TabContent activeTab={activeTab}>
            <TabPane tabId="1">
              <div className='container'>
-               <br />
-                <Lista_productos/>;
+              <ListaDeProductos/>
              </div>
   
            </TabPane>
   
            <TabPane tabId="2">
              <div className='container'>
-               <br />
-               <img src='https://lh3.googleusercontent.com/a-/AOh14GjjMfH-BpCvLrIU7AoboHTinGSIgLowZtLIGrJTFg=s360-p-rw-no'
-                width={300} height={300}
-                />
+               <FormularioProducto/>
              </div>
   
            </TabPane>
   
            <TabPane tabId="3">
              <div className='container'>
-               <br />
-               contenido 3
+              <ListaVentas/>
              </div>
   
            </TabPane>

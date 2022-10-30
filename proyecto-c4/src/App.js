@@ -2,7 +2,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {TabContent, TabPane, Nav, NavItem, NavLink, Container, Button, } from "reactstrap";
 import { useState } from 'react';
-import Welcome from "./componentes/nombre"
 import Tab_cliente from './componentes/Tab_cliente';
 import Tab_administrador from './componentes/Tab_administrador';
 
