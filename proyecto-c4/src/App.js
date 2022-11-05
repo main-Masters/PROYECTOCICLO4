@@ -18,7 +18,7 @@ function App() {
   if (vistaTab == "administrador"){
     return(
       <div>
-      <Button onClick={()=>tipoUsuario("administrador")}>administrador</Button>
+      <Button onClick={()=>tipoUsuario("administrador")}>Administrador</Button>
       <Button onClick={()=>tipoUsuario("cliente")}>Cliente</Button>
       <div>
         <Tab_administrador/>
@@ -29,7 +29,7 @@ function App() {
   else{
     return(
       <div>
-      <Button onClick={()=>tipoUsuario("administrador")}>administrador</Button>
+      <Button onClick={()=>tipoUsuario("administrador")}>Administrador</Button>
       <Button onClick={()=>tipoUsuario("cliente")}>Cliente</Button>
       <div>
         <Tab_cliente/>
