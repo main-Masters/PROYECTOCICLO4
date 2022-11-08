@@ -1,11 +1,9 @@
 import {TabContent, TabPane, Nav, NavItem, NavLink, Table} from "reactstrap";
 import { useState } from 'react';
-import ListaDeProductos from "./ListaDeProductos";
 import ListaCarrito from "./ListaCarrito";
+import CrudTable from "./CrudTable";
 
-
-
-function Tab_cliente() {
+function Tab_cliente({db, setDb}) {
 
     const[activeTab,setActiveTab] = useState("1");
   
@@ -37,9 +35,7 @@ function Tab_cliente() {
          
          <TabContent activeTab={activeTab}>
            <TabPane tabId="1">
-
-            <ListaDeProductos/>
-
+           <div> <CrudTable data={db} /> </div>
            </TabPane>
   
            <TabPane tabId="2">

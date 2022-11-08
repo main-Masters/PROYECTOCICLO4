@@ -1,14 +1,18 @@
 import {TabContent, TabPane, Nav, NavItem, NavLink} from "reactstrap";
 import { useState } from 'react';
-import ListaDeProductos from "./ListaDeProductos";
-import FormularioProducto from "./FormularioProducto";
+
 import ListaVentas from "./ListaVentas";
 
+import CrudApp from "./CrudApp";
+import CrudTable from "./CrudTable";
 
+// const productos = require('../api/sample.json');
+const ventasDb= require('../api/ventas.json');
 
-
-function Tab_administrador() {
+function Tab_administrador({db, setDb}) {
+  // const [db, setDb] = useState(productos);
     // const [productos, setProductos] = useState([]);
+    const [ventasDb, setVentasDb] = useState(ventasDb);
     const[activeTab,setActiveTab] = useState("1");
   
     const cambiarTab = (numeroTab) =>{
@@ -16,15 +20,6 @@ function Tab_administrador() {
         setActiveTab(numeroTab);
       }
     }
-    
-    
-    //   const agregarProducto = producto => {
-    // if (producto.nombre.trim()) {
-    //   producto.nombre = producto.nombre.trim();
-    //   const productosActualizados = [producto, ...productos];
-    //   setProductos(productosActualizados);
-    // }
-    //}
 
     return (
       <div className="Tab_administrador">
@@ -57,18 +52,15 @@ function Tab_administrador() {
          </Nav>
          
          <TabContent activeTab={activeTab}>
+
            <TabPane tabId="1">
-             <div className='container'>
-              <ListaDeProductos/>
-             </div>
-  
+           <div> <CrudTable data={db} /> </div>
            </TabPane>
-  
+
            <TabPane tabId="2">
              <div className='container'>
-               <FormularioProducto/>
+              <CrudApp db={db} setDb={setDb} /> 
              </div>
-  
            </TabPane>
   
            <TabPane tabId="3">
