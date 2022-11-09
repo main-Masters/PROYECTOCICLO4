@@ -12,7 +12,7 @@ const ventasDb= require('../api/ventas.json');
 function Tab_administrador({db, setDb}) {
   // const [db, setDb] = useState(productos);
     // const [productos, setProductos] = useState([]);
-    const [ventasDb, setVentasDb] = useState(ventasDb);
+    //const [ventasDb, setVentasDb] = useState(ventasDb);
     const[activeTab,setActiveTab] = useState("1");
   
     const cambiarTab = (numeroTab) =>{

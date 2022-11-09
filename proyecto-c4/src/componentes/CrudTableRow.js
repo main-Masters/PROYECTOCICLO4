@@ -1,5 +1,4 @@
 import React from "react";
-import Imagen from "./Imagen";
 
 const CrudTableRow = ({ el, setDataToEdit, deleteData, admin }) => {
   let { nombre, valor, stock, imagen, id } = el;
