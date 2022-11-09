@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import CrudForm from './CrudForm';
-import CrudTable from './CrudTable';
+import CrudFormVentas from './CrudFormVentas'
+import CrudTableVentas from './CrudTableVentas'
 
-
-
-const CrudApp = ({db, setDb}) => {
-
-  // const [db, setDb] = useState(data);
+const CrudVentas = ({db, setDb}) => {
   
   const [dataToEdit, setDataToEdit] = useState(null);
 
@@ -34,17 +30,17 @@ const CrudApp = ({db, setDb}) => {
 
   return (
     <div>
-      <div> <CrudForm createData={createData} 
-                      updateData={updateData} 
-                      dataToEdit={dataToEdit} 
-                      setDataToEdit={setDataToEdit} /> </div>
-      <div> <CrudTable data={db} 
-                        setDataToEdit={setDataToEdit} 
-                        deleteData={deleteData}
-                        admin={1} /> </div>
-    </div>
+        <div> <CrudFormVentas createData={createData} 
+                              updateData={updateData} 
+                              dataToEdit={dataToEdit} 
+                              setDataToEdit={setDataToEdit}/> </div>
 
-  )
+        <div> <CrudTableVentas data={db} 
+                              setDataToEdit={setDataToEdit} 
+                              deleteData={deleteData}
+                              admin={1}/> </div>
+    </div>
+  )   
 }
 
-export default CrudApp
+export default CrudVentas

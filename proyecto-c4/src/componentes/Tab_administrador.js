@@ -5,14 +5,15 @@ import ListaVentas from "./ListaVentas";
 
 import CrudApp from "./CrudApp";
 import CrudTable from "./CrudTable";
+import CrudVentas from "./CrudVentas";
 
 // const productos = require('../api/sample.json');
-const ventasDb= require('../api/ventas.json');
+const ventasDdbb= require('../api/ventas.json');
 
 function Tab_administrador({db, setDb}) {
   // const [db, setDb] = useState(productos);
     // const [productos, setProductos] = useState([]);
-    //const [ventasDb, setVentasDb] = useState(ventasDb);
+    const[ventasDb, setVentasDb] = useState(ventasDdbb);
     const[activeTab,setActiveTab] = useState("1");
   
     const cambiarTab = (numeroTab) =>{
@@ -65,7 +66,7 @@ function Tab_administrador({db, setDb}) {
   
            <TabPane tabId="3">
              <div className='container'>
-              <ListaVentas/>
+              <CrudVentas db={ventasDb} setDb={setVentasDb} />
              </div>
   
            </TabPane>

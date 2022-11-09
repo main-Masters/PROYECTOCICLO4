@@ -1,22 +1,26 @@
 [
     {
         "id":"1",
-        "fecha":"07/11/2022",
+        "referencia":"MTV23",
+        "fecha":"07-11-2022",
         "monto":"1200000"
     },
     {
         "id":"2",
-        "fecha":"06/11/2022",
+        "referencia":"MST23",
+        "fecha":"06-11-2022",
         "monto":"1400000"
     },
     {
         "id":"3",
-        "fecha":"04/11/2022",
+        "referencia":"RTV23",
+        "fecha":"04-11-2022",
         "monto":"1300000"
     },
     {
         "id":"4",
-        "fecha":"01/11/2022",
+        "referencia":"MOT23",
+        "fecha":"01-11-2022",
         "monto":"2200000"
     }
 ]
