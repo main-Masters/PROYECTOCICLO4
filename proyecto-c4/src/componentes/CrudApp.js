@@ -10,6 +10,8 @@ const CrudApp = ({db, setDb}) => {
   
   const [dataToEdit, setDataToEdit] = useState(null);
 
+  
+
   const createData = (data) => {
     data.id = db.length + 1;
     //console.log(data);
@@ -32,16 +34,22 @@ const CrudApp = ({db, setDb}) => {
     return;
   }};
 
+  // const estadoCarrito = (data) =>{ 
+
+  // }
+
   return (
     <div>
       <div> <CrudForm createData={createData} 
                       updateData={updateData} 
                       dataToEdit={dataToEdit} 
                       setDataToEdit={setDataToEdit} /> </div>
+
       <div> <CrudTable data={db} 
                         setDataToEdit={setDataToEdit} 
                         deleteData={deleteData}
-                        admin={1} /> </div>
+                        admin={1}
+                        /> </div>
     </div>
 
   )

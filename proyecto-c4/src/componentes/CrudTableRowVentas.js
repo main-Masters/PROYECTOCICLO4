@@ -15,7 +15,7 @@ const CrudTableRowVentas = ({ el, setDataToEdit, deleteData, admin }) => {
       </td>):(<td>
       <button > add Carrito</button>
       </td>)}   
-  </tr>
+    </tr>
   )
 }
 

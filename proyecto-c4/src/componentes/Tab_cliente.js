@@ -1,11 +1,15 @@
 import {TabContent, TabPane, Nav, NavItem, NavLink, Table} from "reactstrap";
 import { useState } from 'react';
-import ListaCarrito from "./ListaCarrito";
 import CrudTable from "./CrudTable";
+import CrudCarrito from "./CrudCarrito";
+import ShoppingCart from "./ShoppingCart";
 
 function Tab_cliente({db, setDb}) {
 
     const[activeTab,setActiveTab] = useState("1");
+
+    //const [estadoCarrito, setEstadoCarrito] = useState(0)
+    
   
     const cambiarTab = (numeroTab) =>{
       if(activeTab !== numeroTab){
@@ -23,25 +27,11 @@ function Tab_cliente({db, setDb}) {
               Lista De Productos
               </NavLink>
            </NavItem>
-  
-           <NavItem>
-             <NavLink 
-                className={(activeTab=="2" ? "activeTab baseTab" : "baseTab" )}
-             onClick={()=>cambiarTab("2")}>
-               Carrito
-             </NavLink>
-           </NavItem>
          </Nav>
          
          <TabContent activeTab={activeTab}>
            <TabPane tabId="1">
-           <div> <CrudTable data={db} /> </div>
-           </TabPane>
-  
-           <TabPane tabId="2">
-
-            <ListaCarrito/>
-
+            <ShoppingCart products = {db}/>
            </TabPane>
 
          </TabContent>

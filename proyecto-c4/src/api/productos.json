@@ -5,7 +5,7 @@
         "valor": "2899900",
         "stock": "19",
         "calificacion": "8.5",
-        "imagen" : "TV"
+        "imagen" : "TELEVISORLG32IN.png"
     },
     {
         "id": "2",
@@ -13,7 +13,7 @@
         "valor": "2999900",
         "stock": "11",
         "calificacion": "9.5",
-        "imagen" : "imagenTVLG32IN.png"
+        "imagen" : "TELEVISORSAMSUNG32IN.png"
     },
     {
         "id": "3",
@@ -21,7 +21,7 @@
         "valor": "1500000",
         "stock": "9",
         "calificacion": "5.5",
-        "imagen" : "imagenTEATROENCASALG200W.png"
+        "imagen" : "TEATROENCASALG200W.png"
     },
     {
         "id": "4",
@@ -29,6 +29,6 @@
         "valor": "1800000",
         "stock": "17",
         "calificacion": "9.5",
-        "imagen" : "imagenTEATROENCASASAMSUNG200W.png"
+        "imagen" : "TEATROENCASASAMSUNG200W.png"
     }
 ]
